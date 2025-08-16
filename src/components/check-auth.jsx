@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useNavigation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const CheckAuth = ({ children, protectedRoute }) => {
-  const navigate = useNavigation();
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
