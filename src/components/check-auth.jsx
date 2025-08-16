@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const CheckAuth = ({ children, protectedRoute }) => {
+function CheckAuth({ children, protectedRoute }) {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
 
@@ -24,10 +24,9 @@ const CheckAuth = ({ children, protectedRoute }) => {
   }, [navigate, protectedRoute]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div>loading...</div>;
   }
-
   return children;
-};
+}
 
 export default CheckAuth;
