@@ -32,7 +32,7 @@ createRoot(document.getElementById("root")).render(
         <Route
           path="/login"
           element={
-            <CheckAuth protected={true}>
+            <CheckAuth protected={false}>
               <Login />
             </CheckAuth>
           }
@@ -40,8 +40,16 @@ createRoot(document.getElementById("root")).render(
         <Route
           path="/signup"
           element={
-            <CheckAuth protected={true}>
+            <CheckAuth protected={false}>
               <SignUp />
+            </CheckAuth>
+          }
+        />
+        <Route
+          path="/admin"
+          element={
+            <CheckAuth protected={true}>
+              <Admin />
             </CheckAuth>
           }
         />
