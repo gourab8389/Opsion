@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TicketPage = () => {
+const TicketDetailsPage = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const TicketPage = () => {
   )
 }
 
-export default TicketPage
+export default TicketDetailsPage
