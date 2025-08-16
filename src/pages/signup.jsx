@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-
+import ApiUrl from '../utils/server-connect';
 const SignUp = () => {
   const [form, setForm] = useState({
     email: "",
@@ -63,9 +63,6 @@ const SignUp = () => {
     }
 
     try {
-      // Replace with actual ApiUrl when integrating
-      const ApiUrl = "http://localhost:5000/api";
-      
       const res = await fetch(`${ApiUrl}/auth/signup`, {
         method: "POST",
         headers: {
